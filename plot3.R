@@ -44,7 +44,7 @@ drawPlot <- function() {
   two <- grepl(columns$DateText,pattern = to, fixed = TRUE)
   combined <- one | two
   
-  days_of_interest <- columns[three,]
+  days_of_interest <- columns[combined,]
   
   with(days_of_interest, 
        plot(DateTime, Sub_metering_1, type="l", ylab=label_y, xlab=label_x, col=colors[1]))

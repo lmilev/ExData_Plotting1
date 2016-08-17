@@ -40,7 +40,7 @@ drawPlot <- function() {
   two <- grepl(columns$DateText,pattern = to, fixed = TRUE)
   combined <- one | two
   
-  days_of_interest <- columns[three,]
+  days_of_interest <- columns[combined,]
   
   par(mfrow = c(2, 2)) 
   
